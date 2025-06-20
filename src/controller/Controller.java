@@ -7,11 +7,11 @@ import model.Service.ServiceImpl;
 import java.util.List;
 
 public class Controller{
-    private static ServiceImpl service = new ServiceImpl();
+    private static final ServiceImpl service = new ServiceImpl();
     public  static List<ProductResponseDto> getAllProduct(){
         return service.DisplayProduct();
     }
-    public static ProductResponseDto insertNewProduct(ProductCreateDto productCreateDto){
-        return service.InsertProduct(productCreateDto);
+    public static void insertNewProduct(ProductCreateDto productCreateDto){
+        service.InsertProduct(productCreateDto);
     };
 }

@@ -6,6 +6,6 @@ import java.util.Date;
 public record ProductResponseDto(
         String uuid,
         String pName,
-        Date expiredDate
+        LocalDate expiredDate
 ) {
 }
